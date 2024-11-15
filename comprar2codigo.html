@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/SuaSortehoje/marcou_ganhou/main/banner.jpg">
     <link rel="icon" href="https://raw.githubusercontent.com/SuaSortehoje/marcou_ganhou/main/banner.jpg" type="image/jpg">
@@ -7,109 +7,315 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
     
-    <title>Cópia de Texto</title>
+    <title>Título da página</title>
     <style>
-        
-        body{
-            background:black;
-            color:white;
-        }
         h2{
             text-align:center;
-            color:lime;
         }
-        .content{
-            margin-top:50%;
+        body{
+            text-align:cente;
+            background:#ff15fc
+;
         }
-        .site{
-            color:black;
-            text-decoration:none;
-            background:skyblue;
-            outline:none;
-            border-radius:4px;
-            
-            outline:none;
+        .imgnubank{
+       
+            width:80%;
+            height:300px;
+            border:1px solid red;
         }
-        .divSite{
-            text-align:center;
-            margin-top:30%;
-            
-        }
-        .inpuTxt{
-            text-align:center;
-            margin-left:20px;
-        }
-        .iinput{
+        .content-img{
             text-align:center;
         }
-        .txtpg{
-            text-align:center;
+        .inputnone{
+            display:none;
         }
-      
+        .btnDiv1{
+            display: flex; justify-content: space-between
+        }
+     .btnDiv{
+     margin:2px;
+     display: flex; justify-content: space-between;
+         
+     }
+     .lbl-chave{
+         text-align:center;
+         color:lime;
+         font-weight:bold;
+         display:flex;
+         justify-content:center;
+         margin-left:px;
+         
+         
+     }
+     .baicouBtn{
+         display: flex; justify-content: space-between;
+         text-align:center;
+         
+         
+     }
+      .btn-baixo{
+     width:30%;
+     text-align:center;
+     height:30px;
+     
+     background:skyblue;
+     font-size:12px;
+     color:black;
+     border-radius:10px;
+     font-weight:bold;
+     display: flex; justify-content: space-between;
+     
+     
+       
+     }
+     .btn-baixo2{
+     width:40%;
+     text-align:center;
+     height:30px;
+     margin-left:62px;
+     background:skyblue;
+     font-size:12px;
+     color:black;
+     border-radius:10px;
+     font-weight:bold;
+     display: flex; justify-content: space-between;
+     
+       
+     }
+     .btn-baixo:focus{
+         background:lime;
+         font-size:10px;
+     }
+        .btn-baixo2:focus{
+         background:lime;
+         font-size:10px;
+     }
+   .parag-Valor{
+       text-align:center;
+       font-size:25px;
+       font-weight:bold;
+       margin:10px;
+   }
+   .subtitulo{
+       font-weight:bold;
+       text-align:center;
+   }
+   p{
+       text-align:center;
+       font-weight:bold;
+       margin:0.3;
+   }
+   .acessaSite{
+       color:lime;
+   }
+   .site{
+       text-align:center;
+       background:skyblue;
+       margin:0;
+       top:0;
+        padding:0;
+   }
+   .divSite{
+       margin:0;
+       top:0;
+       background:skyblue;
+       color:black;
+       font-weight:bold;
+       text-decorate:none;
+       padding:0;
+       text-align:center;
+       
+   }
+   .pInline{
+       text-align:center;
+       font-size:10px;
+   }
+   .indetificad{
+       position :relative;
+       text-align:center;
+       font-size:14px;
+   }
+   .acessoCodigo{
+       text-align:center;
+   }
+   .bbt{
+       background:skyblue;
+       border-radius:10px;
+   }
+   .bbt:focus{
+       background:#aaaaaa;
+       outline:none;
+       text-decoration:none;
+       color:white;
+   }
+   .meuBotao{
+       font-size:10px;
+   }
+   
+   .hidden {
+       display: none;
+   }
+.inputFile{
+    display:none;
+    
+    
+}
+
+.btnEnVioFile{
+    width:30%;
+     text-align:center;
+     height:30px;
+     
+     background:skyblue;
+     font-size:12px;
+     color:black;
+     border-radius:10px;
+     font-weight:bold;
+}
+.divFile{
+    
+    display: flex; justify-content: center;
+    mar
+}
     </style>
 </head>
 <body>
-    <div class="content">
-    <h2>02<br />Cópia o Codigo</h2>
     
+    <h2>Use o QR Code do Pix para pagar</h2>
+
+<p class="subtitulo">Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code ou pix cola<p/>
+
+
+<div class="content-img">
+   <img class="imgnubank" src="https://raw.githubusercontent.com/SuaSortehoje/Bigwin/refs/heads/main/qr4.jpg"></div>
+   
+   <input class="inputnone" type="text" id="meuInputqr" value="00020126580014BR.GOV.BCB.PIX0136bba34a15-a703-45fc-8b74-36d2e75d3bfb52040000530398654044.005802BR5922Carlos dos Santos Reis6009SAO PAULO621405103Whw2RKL1o630436B4">
+   
+   
+   <input class="inputnone" type="text" id="meuInput" value="bba34a15-a703-45fc-8b74-36d2e75d3bfb">
+   
+   
+   <p class="parag-Valor">R$ 4,00</p>
     
-    <!-- Campo de entrada de texto -->
-    <div class="iinput">
-    <input class="inpuTxt" type="text" id="meuInput" value="592315254"readonly>
-    
+  <div class="btnDiv1">
+   
+   <label for="meuBotao"class="lbl-chave"> Código do QR code</label><button id="meuBotao" class="btn-baixo" onclick="chamar()">Copiar QR Code</button>
+   </div>
+   
+    <div class="btnDiv">
     <!-- Botão para copiar o texto -->
-    <button onclick="copiarTexto()">Copiar</button>
-    </div><br>
-    <div class="iinput">
-    <input class="inpuTxt" type="text" id="meuInput1" value="487021874"readonly>
+  <label for="meuBotao2"class="lbl-chave">PixChave Aleatória  </label>
+  <button id="meuBotao2" class="btn-baixo2" onclick="chamar2()">Copiar Aleatória</button>
+        </div>
+  
+  
+  
+<div class="divFile">
     
-    <!-- Botão para copiar o texto -->
-    <button onclick="copiarTexto1()">Copiar</button>
+   <label class="lbl-chave" for="escoderInput">ENVIAR COMPROVANTE</label>
+   </div>
+   <input type="file" class="inputFile"id="escoderInput"><br>
+   
+
+
+
+
+
+<p>Nome : Carlos dos Santos Reis</p>
+
+<p>CPF•••.626.315-••</p>
+
+<p>Banco260 - Nu Pagamentos S.A. - Instituição de Pagamento</p>
+<div class="pInline">
+<p class="indetificad">Identificador = 3Whw2RKL1o</p>
+</div>
+
+   <p>APÓS O PAGAMENTO CLICK AQUI,</p>
+   <div class="acessoCodigo">
+   <button id="btnContagem" class="bbt hidden" onclick="aguarde()">Acessar Código</button>
+</div>
+ <p>AGUARDE PARA ACESSÁR O CÓDIGO</p>
+   
+   
     </div>
-    
-<div class="divSite"> 
-    Após Cópia Acesse o Site e cole o Codigo
-   <button class="site" onclick="parada()">www.pixplay.com.br</button>
-    </div>
-    <p class ="txtpg">ESSE CÓDIGO SÓ TEM VALIDADE PARA PREMIAÇÃO COM O PAGAMENTO SENDO FEITO ANTES DA VALIDACAO DO JOGO. </p>
-    </div>
-<script>
-        function copiarTexto() {
-            // Seleciona o elemento input
-            var textoCopiado = document.getElementById("meuInput");
-            
-            // Seleciona o texto
-            textoCopiado.select();
-            textoCopiado.setSelectionRange(0, 99999); // Para dispositivos móveis
-            
-            // Copia o texto para a área de transferência
-            navigator.clipboard.writeText(textoCopiado.value);
-            
-            // Exibe uma mensagem de confirmação
-            alert("Codigo copiado Sucess: " + textoCopiado.value);
-        }
-        function parada(){
-            window.open("https://pixplay.netlify.app/", "_blank");
-        }
+</div>
+   
+   <script>
+        // Função para copiar o texto do QR Code
         function copiarTexto1() {
-            // Seleciona o elemento input
-            var textoCopiado = document.getElementById("meuInput1");
-            
-            // Seleciona o texto
+            const textoCopiado = document.getElementById("meuInputqr");
             textoCopiado.select();
-            textoCopiado.setSelectionRange(0, 99999); // Para dispositivos móveis
-            
-            // Copia o texto para a área de transferência
             navigator.clipboard.writeText(textoCopiado.value);
-            
-            // Exibe uma mensagem de confirmação
-            alert("Codigo copiado Sucess: " + textoCopiado.value);
+            alert("Código QR copiado com sucesso: " + textoCopiado.value);
+            mostrarBotaoAcesso();
         }
-        function parada(){
-            window.open("https://pixplay.netlify.app/", "_blank");
+
+        // Função para copiar a chave aleatória
+        function copiarTexto() {
+            const textoCopiado = document.getElementById("meuInput");
+            textoCopiado.select();
+            navigator.clipboard.writeText(textoCopiado.value);
+            alert("Chave aleatória copiada com sucesso: " + textoCopiado.value);
+            mostrarBotaoAcesso();
         }
+
+        // Função para alterar o texto dos botões
+        function alterarTexto(botao, texto) {
+            botao.innerHTML = texto;
+        }
+
+        // Funções para chamar as cópias e alterar os textos
+        function chamar() {
+            copiarTexto1();
+             alert("APOS O PAGAMENTO RETORNE A ESSA PAGINA"); alterarTexto(document.getElementById("meuBotao"), "COPIADO COM SUCESSO!");
+        }
+
+        function chamar2() {
+            copiarTexto();
+           alert("APOS O PAGAMENTO RETORNE A ESSA PAGINA"); alterarTexto(document.getElementById("meuBotao2"), "COPIADO COM SUCESSO!");
+        }
+
+        // Função para enviar o comprovante
+        function chamar3() {
+            alert("VERIFICANDO... \nAPÓS A VERIFICAÇÃO SERÁ LIBERADO O ACESSO \n\nAguarde Nessa Tela");
+        }
+
+        // Mostrar o botão "Acessar Código"
+        function mostrarBotaoAcesso() {
+            setTimeout(() => {
+                document.getElementById("btnContagem").classList.remove('hidden');
+            }, 10000);
+        }
+
+        // Contagem no botão "Acessar Código"
+        const botaoContagem = document.getElementById("btnContagem");
+        let intervalo;
+        let tempo = 0;
+
+        botaoContagem.addEventListener("click", () => {
+            if (intervalo) {
+                clearInterval(intervalo);
+                intervalo = null;
+                botaoContagem.textContent = "Iniciar";
+                return;
+            }
+
+            alert("Aguarde Nessa Tela");
+            botaoContagem.textContent = "Contagem: 0s";
+            tempo = 0;
+
+            intervalo = setInterval(() => {
+                tempo++;
+                botaoContagem.textContent = `Aguarde -  ${tempo}s`;
+
+             if (tempo >= 30) {
+    clearInterval(intervalo);
+    window.location.href = "comprar2codigo.html";
+    botaoContagem.textContent = "Redirecionando...";
+}
+
+            }, 1000);
+        });
     </script>
 </body>
-
 </html>
-
