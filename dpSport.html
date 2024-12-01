@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//pt-BR">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/SuaSortehoje/ApostaFutebol/refs/heads/main/dpsport.jpg">
+    <link rel="icon" href="https://raw.githubusercontent.com/SuaSortehoje/ApostaFutebol/refs/heads/main/dpsport.jpg" type="image/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+    <title>DP SPORTS</title>
+    <style>
+        h1{
+            display:flex;
+            justify-content:center;
+            margin:0;
+            
+        }
+        .btnDv{
+            margin-top:40px;
+            display-flex;
+            justify-content:center;
+            flex-direction:center;
+            margin-left:2px;
+        }
+        button{
+            width:30%;
+            height:50px;
+            margin:2px;
+            font-weight:bold;
+            color:black;
+            background:lightblue;
+            border-radius:50px;
+        }
+        button:hover,focus{
+            background:#40ffa1;
+            color:black;
+        }
+        .btnPix{
+            
+            
+            
+        }
+        .imgemCentral{
+            width:100%;
+            height:400px;
+        }
+        .btnComoJogar{
+            margin:2px;
+        }
+        .btnindiqueGanhe{
+            width:50%;
+            height:50px;
+            border-radius:50px;
+            font-weight:bold;
+            color:black;
+            background:lightblue;
+            border-radius:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DP SPORT</h1>
+    <img class ="imgemCentral" src="imagemCentral.jpg"/>
+    <div class="btnDv">
+    <button id="btn1">WHATSAPP</button>
+    <button id="btn2">APOSTE AQUI</button>
+    
+    <button id="btn3"class="btnPix">CHAVE PIX</button>
+  
+     <button id="btn4"class="btnComoJogar">COMO JOGAR</button>
+     <input id="btn5"type="button" value="INDIQUE E GANHE" class="btnindiqueGanhe"></button>
+    </div>
+    <script>
+        const carlos = document.body;
+        carlos.style.backgroundColor = "blue";
+        carlos.style.color="red";
+        carlos.style.fontSize ="18px";
+        
+        // Função para redirecionar o usuário para um URL
+    function redirecionar(url) {
+        window.location.href = url;
+    }
+
+    // Adicionando eventos de clique para cada botão
+    document.getElementById('btn1').addEventListener('click', () => redirecionar('https://wa.me/5571992290058'));
+    document.getElementById('btn2').addEventListener('click', () => redirecionar('https://WWW.DPSPORTE.COM'));
+    document.getElementById('btn3').addEventListener('click', () => redirecionar('https://multijogo.github.io/Link-de-pagamento-pix/'));
+    document.getElementById('btn4').addEventListener('click', () => redirecionar('https://suasortehoje.github.io/ApostaFutebol/joga.html'));
+    document.getElementById('btn5').addEventListener('click', () => redirecionar('https://wa.me/5571992290058'));
+    </script>
+</body>
+</html>
