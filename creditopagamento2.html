@@ -663,4 +663,149 @@ function liberarBotoesAposCodigo() {
     let codigoDigitado = parseInt(document.getElementById("codigo").value);
     if (codigos.includes(codigoDigitado) && !codigoUsado.includes(codigoDigitado)) {
         liberarBotoes(true); // Habilitar os botões para selecionar números
-        limparCampos(); 
+        limparCampos(); // Limpar os campos e números selecionados ao digitar um novo código
+    } else {
+        liberarBotoes(false); // Manter os botões desabilitados
+    }
+}
+
+// Adicionando o evento de input no campo de código
+document.getElementById("codigo").addEventListener("input", liberarBotoesAposCodigo);
+
+// Modifique a função verificar para desabilitar os botões após a verificação
+function verificar() {
+    let codigoDigitado = parseInt(document.getElementById("codigo").value);
+    let acertos = numerosSelecionados.filter(n => numerosBloqueados.includes(n)).length;
+    let msg = "";
+
+    if (codigos.includes(codigoDigitado) && !codigoUsado.includes(codigoDigitado)) {
+        codigoUsado.push(codigoDigitado);
+        salvarCodigoUsado();
+
+        atualizarNumerosBloqueados();
+        document.getElementById("numerosBloqueadosContainer").style.display = "grid";
+
+        if (acertos === 5) {
+            msg = "Parabéns, você ganhou!";
+            document.getElementById("enviar").style.display = "block"; // Mostrar botão "Enviar"
+        } else {
+            msg = "Tente novamente.";
+            document.getElementById("enviar").style.display = "none";
+        }
+
+        document.getElementById("mensagem").innerText = msg;
+
+        // Desabilitar os botões após a verificação
+        liberarBotoes(false);
+
+        // Adiciona um temporizador para esconder os números bloqueados após 10 segundos
+        setTimeout(() => {
+            document.getElementById("numerosBloqueadosContainer").style.display = "none";
+            location.reload(); // Recarregar a página após os números sumirem
+        }, 15000); // 10000 milissegundos = 10 segundos
+    } else if (codigoUsado.includes(codigoDigitado)) {
+        document.getElementById("mensagem").innerText = "Este código já foi usado. Tente outro.";
+    } else {
+        document.getElementById("mensagem").innerText = "Código inválido.";
+    }
+}
+function liberarBotoesAposCodigo() {
+    let codigoDigitado = parseInt(document.getElementById("codigo").value);
+    if (codigos.includes(codigoDigitado) && !codigoUsado.includes(codigoDigitado)) {
+        liberarBotoes(true); // Habilitar os botões para selecionar números
+        limparCampos(); // Limpar os campos e números selecionados ao digitar um novo código
+    } else {
+        liberarBotoes(false); // Manter os botões desabilitados
+    }
+}
+
+// Adicionando o evento de input no campo de código
+document.getElementById("codigo").addEventListener("input", liberarBotoesAposCodigo);
+
+        function carregarCodigoUsado() {
+            let dados = localStorage.getItem("codigoUsado");
+            if (dados) {
+                codigoUsado = JSON.parse(dados);
+            }
+        }
+
+        function salvarCodigoUsado() {
+            localStorage.setItem("codigoUsado", JSON.stringify(codigoUsado));
+        }
+
+        function gerarCodigo() {
+    return Math.floor(100000 + Math.random() * 900000); // Gera um código de 6 dígitos
+}
+
+function enviarViaWhatsApp() {
+    let numeroBloqueadosTexto = `Números Bloqueados: ${numerosBloqueados.join(", ")}`;
+    let numerosSelecionadosTexto = `Números Selecionados: ${numerosSelecionados.join(", ")}`;
+    
+    // Obter a data e hora atual
+    let dataAtual = new Date();
+    let dataTexto = `Data: ${dataAtual.toLocaleDateString()}`;
+    let horaTexto = `Hora: ${dataAtual.toLocaleTimeString()}`;
+
+    // Solicitar o número do PIX
+    let pix = prompt("Por favor, digite o número do PIX:");
+
+    // Verificar se o PIX foi digitado
+    if (pix) {
+        let codigo = gerarCodigo(); // Gera um código de 6 dígitos
+        // Criar a mensagem
+        let mensagem = `PIX: ${pix}\nCódigo: ${codigo}\n${numeroBloqueadosTexto}\n${numerosSelecionadosTexto}\n${dataTexto}\n${horaTexto}`;
+
+        // Criar a URL para enviar via WhatsApp
+        let url = "https://api.whatsapp.com/send?phone=5571992290058&text=" + encodeURIComponent(mensagem);
+        window.open(url, "_blank");
+    } else {
+        alert("O número do PIX é obrigatório.");
+    }
+}
+
+
+// Certifique-se de que a função enviarViaWhatsApp seja chamada ao clicar no botão "Enviar"
+document.getElementById("enviar").addEventListener("click", enviarViaWhatsApp);
+
+        function liberarBotoesAposCodigo() {
+            let codigoDigitado = parseInt(document.getElementById("codigo").value);
+            if (codigos.includes(codigoDigitado) && !codigoUsado.includes(codigoDigitado)) {
+                liberarBotoes(true); // Habilitar os botões para selecionar números
+            } else {
+                liberarBotoes(false); // Manter os botões desabilitados
+            }
+        }
+
+        document.getElementById("codigo").addEventListener("input", liberarBotoesAposCodigo);
+        
+        
+             // Array de cores
+        var cores = ['#FF5733', '#3357FF', '#FF33A1', '#A133FF', '#000000', '#0014ed', '#fffa00'];
+
+        // Função para mudar a cor do background
+        function mudarCorBackground() {
+            // Selecionar uma cor aleatória do array
+            var corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            // Aplicar a cor ao background do body
+            document.fundoCima.style.backgroundColor = corAleatoria;
+        }
+
+        // Chamar a função a cada 30 minutos (30 minutos = 30 * 60 * 1000 milissegundos)
+        setInterval(mudarCorBackground, 0.3 * 6 * 1000);
+
+        // Mudar a cor imediatamente ao carregar a página
+        mudarCorBackground();
+        
+         // Inicia com o primeiro liberado
+  window.onload = function () {
+    abrirModal();
+  };
+        
+    </script>
+    
+</body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5571992290058?text=pagamento%20liberacao%20codigo%20de%20Acesso%0Achave%20pix:%20telefone%0A71992290058%0ACarlos Santos Reis%0Avalor%20por%20codigo%20R$%202.00%0AEnvia%20O%20Comprovante" style="position:fixed;width:35px;height:35px;bottom:20px;right:20px;color:#25d366;border-radius:50px;text-align:center;font-size:30px;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i></a>
+</html>
